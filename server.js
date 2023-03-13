@@ -1,7 +1,8 @@
 const express = require("express")
 const app = express()
 
-const PORT = 4000;
+const prayersController = require("./controllers/prayers")
+
 
 /* MiddleWare */
 
@@ -12,6 +13,7 @@ app.use(express.static('public'))
 // Parse data to work with ejs (req.body)
 app.use(express.urlencoded({ extended: false }));
 
+const PORT = 4000;
 
 
 
@@ -24,9 +26,16 @@ app.get('/', (req,res)=>{
 })
 
 
+// Controller-> Router 
+
+app.use('/prayers', prayersController)
 
 
 
+// All Error Handleing Route
+app.get("/*", (req, res) => {
+  res.render("404.ejs");
+});
 
 
 

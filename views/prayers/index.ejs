@@ -1,0 +1,35 @@
+<%- include('../partials/head') %>
+<%- include('../partials/nav') %>
+
+<div class="container my-3 py-2">
+<h1 class="text-center">Create a Prayer request</h1>
+<main>
+    <div class="mb-2">
+        <form method="POST" action="/prayers">
+            <div class="mb-2">
+                <label for="name">Enter Your Name</label>
+                <input type="text" name="name" id="name" class="form-control">
+            </div>
+            <div class="mb-2">
+                <label for="image">Who is recieving prayer?</label>
+                <input type="text" name="image" id="image" class="form-control">
+            </div>
+            <div class="mb-2">
+                <label for="role">Enter Church Name</label>
+                <input type="text" name="role" id="role" class="form-control">
+            </div>
+            <div class="text-center my-2 py-2">
+                <input type="submit" value="Add Prayer" class="btn btn-success" class="form-control">
+            </div>
+
+        </form>
+    </div>
+</main>
+</div>
+
+
+
+
+
+<%- include('../partials/footer') %>
+

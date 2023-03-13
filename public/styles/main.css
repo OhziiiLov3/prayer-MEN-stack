@@ -3,3 +3,7 @@ body{
     padding: 0;
     background-color: #fefae0;
 }
+
+nav{
+    background-color: #e9edc9 !important;
+}
